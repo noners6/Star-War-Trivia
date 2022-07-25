@@ -21,7 +21,7 @@ const DefaultCard = (): ReactElement => {
       </CardContent>
     </Card>
   );
-
+  // some new code
   return <div>{defaultCard}</div>;
 };
 
