@@ -14,15 +14,21 @@ export const RandomCategoryGeneratorButton = (): ReactElement => {
   const [state, setState] = useState(false);
 
   useEffect(() => {
-    randomCard();
-    getStarWarsData(category, entry).then((data: any) => {
-      setData(data);
-    });
-    const key: string = "data";
-    setObjectData(data[key as keyof never[]]);
+    if (userClicked) {
+      setUserClicked(false);
+      randomCard();
+      getStarWarsData(category, entry).then((data: any) => {
+        setData(data);
+      });
+      const key: string = "data";
+      setObjectData(data[key as keyof never[]]);
+      setUserClicked(false);
+    }
   }, [userClicked, setUserClicked]);
 
-  const handleOnClick = () => {
+  const handleOnClick = (e: any) => {
+    e.preventDefault();
+    console.log("you clicked the button");
     setNum(randomGenerator(1, 1));
     setUserClicked(true);
   };

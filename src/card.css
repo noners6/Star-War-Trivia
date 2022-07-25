@@ -1,0 +1,11 @@
+.container {
+  min-width: 400;
+  max-width: fit-content;
+  margin: auto;
+}
+
+.header {
+  font-size: 18;
+  color: #001d3f;
+  margin-bottom: 5;
+}

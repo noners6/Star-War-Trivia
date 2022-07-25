@@ -1,16 +1,11 @@
-import { CardActions, CardContent } from "@mui/material";
 import React, { ReactElement } from "react";
-import { RandomCategoryGeneratorButton } from "./RandomCategoryGeneratorButton";
+import DefaultCard from "././Cards/DefaultCard";
 import "./trivia.css";
 
 export const Trivia = (): ReactElement => {
   const card = (
     <React.Fragment>
-      <CardActions>
-        <RandomCategoryGeneratorButton />
-      </CardActions>
-
-      <CardContent></CardContent>
+      <DefaultCard />
     </React.Fragment>
   );
 

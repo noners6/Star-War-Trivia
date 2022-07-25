@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./app.css";
 import { Trivia } from "./Trivia";
 
 function App() {
