@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+#Welcome to my Star Wars Trivia Game web-app!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The single page view with `film` category:
 
-## Available Scripts
+<img width="784" alt="Screen Shot 2022-07-27 at 5 03 49 PM" src="https://user-images.githubusercontent.com/52838675/181374036-c0239cd8-6afb-4679-96a6-cf0d3b94c453.png">
 
-In the project directory, you can run:
+A closer view on the revealed answer:
 
-### `npm start`
+<img width="464" alt="Screen Shot 2022-07-27 at 5 03 58 PM" src="https://user-images.githubusercontent.com/52838675/181374098-c1553bfa-10c3-493d-8815-42b603d00364.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##What does this app do?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This is a single page application. Upon loading the app, there will be a button to generate a random trivia card from Star Wars. 
 
-### `npm test`
+After the button is clicked, a card of one of six categories will be randomly chosen: films, people, vehicles, starships, species, and planets. The card will have some information, and the user has to guess the correct item. At the bottom of the card there is a button that reveals the correct answer.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##What tech-stack was used?
 
-### `npm run build`
+This is a React/TypeScript app that uses css for styling and axios for the API call. The icons, buttons and some of the UI elements are from MUI library.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Highlights from the design proccess:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Early on, I started the design proccess with a few sketches, and I wasn't sure what I wanted to do, until I settled on this general idea. By the time I started coding, I had already settled on the idea, and had the structure in mind.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. The goal was to use the 'box model'. There are multiple containers in use here: there is the general full-page which has the background. On top of that, there is the `Trivia` container which has the button to generate a card and the card. The main card consists of the `defaultCard` which contains the media, and a child that contains the actual card, such as `filmCard`.
 
-### `npm run eject`
+3. I decided for all of the children to be identical in design, and only differ in color in their background. That way, the user can tell more easily when the category changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Due to time limitations, I had to compromise. This is not the perfect app, and given more time/effort there are many things I could add or improve.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##So, what would I do next if I came back to this project?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. I would add an `about/home` page, with a legend of the colors and some info about the game.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. I would stylize fonts more
 
-## Learn More
+3. Consider adding some counters for correct guesses or correct guesses in a row.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Non visually, the code isn't perfect. It does exactly what I want it to do, but it has a lot of repetition that isn't necessary and I could easily improve upon. It was a little too late in the proccess to rework the code (tech debt!)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+By all means, this is not a perfect app, but it is able to capture the functionality in a relatively simple manner, while also communicating effectively the theme of Star Wars. 
