@@ -44,6 +44,10 @@ This is a React/TypeScript app that uses css for styling and axios for the API c
 
 By all means, this is not a perfect app, but it is able to capture the functionality in a relatively simple manner, while also communicating effectively the theme of Star Wars.
 
+***Other notes:***
+
+Some of the data was spotty in the database, so I had to limit some of the calls to fewer numbers (there were gaps in entries in some categories that caused crashes)
+
 ***Some progress pictures:***
 While developing the card:
 
