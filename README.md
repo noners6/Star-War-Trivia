@@ -14,11 +14,11 @@ This is a single page application. Upon loading the app, there will be a button 
 
 After the button is clicked, a card of one of six categories will be randomly chosen: films, people, vehicles, starships, species, and planets. The card will have some information, and the user has to guess the correct item. At the bottom of the card there is a button that reveals the correct answer.
 
-##What tech-stack was used?
+***What tech-stack was used?***
 
 This is a React/TypeScript app that uses css for styling and axios for the API call. The icons, buttons and some of the UI elements are from MUI library.
 
-##Highlights from the design proccess:
+***Highlights from the design proccess:***
 
 1. Early on, I started the design proccess with a few sketches, and I wasn't sure what I wanted to do, until I settled on this general idea. By the time I started coding, I had already settled on the idea, and had the structure in mind.
 
@@ -28,7 +28,7 @@ This is a React/TypeScript app that uses css for styling and axios for the API c
 
 4. Due to time limitations, I had to compromise. This is not the perfect app, and given more time/effort there are many things I could add or improve.
 
-##So, what would I do next if I came back to this project?
+***So, what would I do next if I came back to this project?***
 
 1. I would add an `about/home` page, with a legend of the colors and some info about the game.
 
