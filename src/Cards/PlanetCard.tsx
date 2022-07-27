@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import _ from "lodash";
 import React, { ReactElement } from "react";
 import "../cards-css/planetCard.css";
+import ButtonPopover from "../PopoverButton";
 
 interface PlanetCardProps {
   planetData: any;
@@ -12,6 +13,7 @@ const PlanetCard = (props: PlanetCardProps): ReactElement => {
   const gravity = _.get(props.planetData, "gravity");
   const terrain = _.get(props.planetData, "terrain");
   const population = _.get(props.planetData, "population");
+  const planetName = _.get(props.planetData, "name");
 
   return (
     <div className={"planetBackground"}>
@@ -45,6 +47,7 @@ const PlanetCard = (props: PlanetCardProps): ReactElement => {
           </div>
         </div>
       </Typography>
+      <ButtonPopover answer={planetName} />
     </div>
   );
 };

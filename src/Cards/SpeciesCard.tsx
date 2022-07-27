@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import _ from "lodash";
 import React, { ReactElement } from "react";
 import "../cards-css/speciesCard.css";
+import ButtonPopover from "../PopoverButton";
 
 interface SpeciesCardProps {
   speciesData: any;
@@ -12,6 +13,7 @@ const SpeciesCard = (props: SpeciesCardProps): ReactElement => {
   const averageLifespan = _.get(props.speciesData, "averageLifespan");
   const designation = _.get(props.speciesData, "desgination");
   const skinColor = _.get(props.speciesData, "skin_color");
+  const speciesName = _.get(props.speciesData, "name");
 
   return (
     <div className={"speciesBackground"}>
@@ -44,6 +46,7 @@ const SpeciesCard = (props: SpeciesCardProps): ReactElement => {
           <span className={"speciesDataText"}>{designation}</span>
         </div>
       </Typography>
+      <ButtonPopover answer={speciesName} />
     </div>
   );
 };

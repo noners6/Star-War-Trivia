@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import _ from "lodash";
 import React, { ReactElement } from "react";
 import "../cards-css/filmCard.css";
+import ButtonPopover from "../PopoverButton";
 
 interface FilmCardProps {
   filmData: any;
@@ -11,6 +12,7 @@ const FilmCard = (props: FilmCardProps): ReactElement => {
   const director = _.get(props.filmData, "director");
   const producer = _.get(props.filmData, "prooducer");
   const releaseDate = _.get(props.filmData, "release_date");
+  const filmName = _.get(props.filmData, "title");
 
   return (
     <div className={"filmBackground"}>
@@ -32,6 +34,7 @@ const FilmCard = (props: FilmCardProps): ReactElement => {
           <span className={"filmDataText"}>{releaseDate}</span>
         </div>
       </Typography>
+      <ButtonPopover answer={filmName} />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import _ from "lodash";
 import React, { ReactElement } from "react";
 import "../cards-css/personCard.css";
+import ButtonPopover from "../PopoverButton";
 
 interface PersonCardProps {
   personData: any;
@@ -10,6 +11,7 @@ const PersonCard = (props: PersonCardProps): ReactElement => {
   const birthYear = _.get(props.personData, "birth_year");
   const hairColor = _.get(props.personData, "hair_color");
   const gender = _.get(props.personData, "gender");
+  const person = _.get(props.personData, "name");
 
   console.log("person data: ", props.personData);
   console.log("birthYear, hairColor", birthYear, hairColor);
@@ -33,6 +35,7 @@ const PersonCard = (props: PersonCardProps): ReactElement => {
           <span className={"personDataText"}>{gender}</span>
         </div>
       </Typography>
+      <ButtonPopover answer={person} />
     </div>
   );
 };
