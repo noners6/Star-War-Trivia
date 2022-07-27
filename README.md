@@ -38,4 +38,17 @@ This is a React/TypeScript app that uses css for styling and axios for the API c
 
 4. Non visually, the code isn't perfect. It does exactly what I want it to do, but it has a lot of repetition that isn't necessary and I could easily improve upon. It was a little too late in the proccess to rework the code (tech debt!)
 
-By all means, this is not a perfect app, but it is able to capture the functionality in a relatively simple manner, while also communicating effectively the theme of Star Wars. 
+By all means, this is not a perfect app, but it is able to capture the functionality in a relatively simple manner, while also communicating effectively the theme of Star Wars.
+
+***Some progress pictures:***
+While developing the card:
+
+<img width="758" alt="Screen Shot 2022-07-26 at 10 38 56 PM" src="https://user-images.githubusercontent.com/52838675/181374462-9fb71a90-679d-4370-bfea-677f761f5a19.png">
+
+Adding the colors to the categories:
+
+ <img width="763" alt="Screen Shot 2022-07-27 at 1 23 12 AM" src="https://user-images.githubusercontent.com/52838675/181374526-477f13e2-836a-4008-a0fb-38f29b69a453.png">
+
+The initial generic card and button from MUI with random colors and pictures:
+
+<img width="760" alt="Screen Shot 2022-07-26 at 8 35 45 PM" src="https://user-images.githubusercontent.com/52838675/181374627-66e3caf2-fd2e-4ad7-9e6b-8e12495ab6a1.png">
