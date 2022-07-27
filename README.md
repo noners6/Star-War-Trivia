@@ -30,6 +30,8 @@ This is a React/TypeScript app that uses css for styling and axios for the API c
 
 4. Due to time limitations, I had to compromise. This is not the perfect app, and given more time/effort there are many things I could add or improve.
 
+5. While there are some SEO features in `public` under `index.html`, they are not very advanced and could use improvement.
+
 ***So, what would I do next if I came back to this project?***
 
 1. I would add an `about/home` page, with a legend of the colors and some info about the game.
