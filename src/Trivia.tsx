@@ -9,7 +9,5 @@ export const Trivia = (): ReactElement => {
     </>
   );
 
-  //USE LODASH DON'T BE AN IDIOT
-
   return <div className="triviaContainer">{card}</div>;
 };
