@@ -1,4 +1,4 @@
-#Welcome to my Star Wars Trivia Game web-app!#
+**Welcome to my Star Wars Trivia Game web-app!**
 
 The single page view with `film` category:
 
@@ -8,7 +8,7 @@ A closer view on the revealed answer:
 
 <img width="464" alt="Screen Shot 2022-07-27 at 5 03 58 PM" src="https://user-images.githubusercontent.com/52838675/181374098-c1553bfa-10c3-493d-8815-42b603d00364.png">
 
-##What does this app do?
+***What does this app do?***
 
 This is a single page application. Upon loading the app, there will be a button to generate a random trivia card from Star Wars. 
 
