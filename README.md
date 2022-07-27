@@ -1,5 +1,7 @@
 **Welcome to my Star Wars Trivia Game web-app!**
 
+Author: Noam Gal
+
 The single page view with `film` category:
 
 <img width="784" alt="Screen Shot 2022-07-27 at 5 03 49 PM" src="https://user-images.githubusercontent.com/52838675/181374036-c0239cd8-6afb-4679-96a6-cf0d3b94c453.png">
