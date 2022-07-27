@@ -1,4 +1,4 @@
-#Welcome to my Star Wars Trivia Game web-app!
+#Welcome to my Star Wars Trivia Game web-app!#
 
 The single page view with `film` category:
 
