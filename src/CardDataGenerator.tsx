@@ -13,12 +13,17 @@ import { getStarWarsData } from "./data/api";
 import "./randomGeneratedCategory.css";
 import { randomGenerator } from "./util";
 
-export const RandomCategoryGeneratorButton = (): ReactElement => {
+// This component renders a button to generate a random card.
+// Once the button is clicked, it randomly picks a category and an entry within it,
+// then it fetches the data, and passes it to the card components to generate a card.
+export const CardDataGenerator = (): ReactElement => {
   const [num, setNum] = useState(0);
   const [userClicked, setUserClicked] = useState(false);
   const [objectData, setObjectData] = useState({});
   const [state, setState] = useState(false);
 
+  // useEffect takes effect after the button is clicked.
+  // Button can be clicked any number of times.
   useEffect(() => {
     if (userClicked) {
       const [testCategory, number] = randomCard();
@@ -40,6 +45,8 @@ export const RandomCategoryGeneratorButton = (): ReactElement => {
     setState(true);
   };
 
+  // After the category is chosen, a random card within the chosen categor is selected.
+  // Returns the string for the category and the card number within it.
   function randomCard() {
     switch (num) {
       case 1:
@@ -50,8 +57,6 @@ export const RandomCategoryGeneratorButton = (): ReactElement => {
         const filmCategory = "films";
         const filmNumber = randomGenerator(1, 6).toString();
         return [filmCategory, filmNumber];
-
-      // Starships had an error in the API call.
       case 3:
         const starshipsCategory = "starships";
         const starshipsNumber = randomGenerator(2, 3).toString();
@@ -76,6 +81,8 @@ export const RandomCategoryGeneratorButton = (): ReactElement => {
     }
   }
 
+  // After selecting a specific card, based on the selection, calls the
+  // appropriate component to render the card.
   function callCard() {
     switch (num) {
       case 1:

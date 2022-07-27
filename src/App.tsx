@@ -4,8 +4,6 @@ import "./app.css";
 import { Trivia } from "./Trivia";
 
 function App() {
-  // Make a request for a user with a given ID
-
   return (
     <div
       style={{

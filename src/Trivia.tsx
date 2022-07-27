@@ -1,13 +1,9 @@
 import React, { ReactElement } from "react";
-import { RandomCategoryGeneratorButton } from "./RandomCategoryGeneratorButton";
+import { CardDataGenerator } from "./CardDataGenerator";
 import "./trivia.css";
 
 export const Trivia = (): ReactElement => {
-  const card = (
-    <>
-      <RandomCategoryGeneratorButton />
-    </>
-  );
+  const card = <CardDataGenerator />;
 
   return <div className="triviaContainer">{card}</div>;
 };

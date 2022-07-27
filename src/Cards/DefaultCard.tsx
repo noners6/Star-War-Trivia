@@ -7,6 +7,9 @@ interface DefaultCardProps {
   cardData: ReactElement;
 }
 
+// This is the card that is constant across all categories.
+// It contains the dark background and the media.
+// It calls the specific category card based on the props it got
 const DefaultCard = (props: DefaultCardProps): ReactElement => {
   const defaultCard = (
     <Card sx={{ maxWidth: 500, minWidth: 400 }}>
