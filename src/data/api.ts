@@ -1,16 +1,5 @@
 import axios, { AxiosResponse } from "axios";
 
-export async function getData(category: string, entry: string) {
-  try {
-    const data = await axios.get(
-      "https://swapi.dev/api/" + category + "/" + entry + "/?format=json"
-    );
-    return data;
-  } catch {
-    return null;
-  }
-}
-
 // Make a request for a user with a given ID
 const getStarWarsData = async (
   category: string,
@@ -20,7 +9,8 @@ const getStarWarsData = async (
     .get("https://swapi.dev/api/" + category + "/" + entry + "/?format=json")
     .then(function (response: AxiosResponse) {
       // handle success
-      console.log("it works", response);
+      console.log("response from API", response);
+      console.log("category, entry", category, entry);
       return response;
     })
     .catch(function (error: AxiosResponse) {

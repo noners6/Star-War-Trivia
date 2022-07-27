@@ -7,11 +7,24 @@ function App() {
   // Make a request for a user with a given ID
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Trivia></Trivia>} />
-      </Routes>
-    </BrowserRouter>
+    <div
+      style={{
+        backgroundImage: `url(https://wallpaperaccess.com/full/503594.jpg)`,
+      }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className={"appContainer"}>
+                <Trivia></Trivia>
+              </div>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

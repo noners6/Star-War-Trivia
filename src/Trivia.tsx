@@ -1,15 +1,15 @@
 import React, { ReactElement } from "react";
-import DefaultCard from "././Cards/DefaultCard";
+import { RandomCategoryGeneratorButton } from "./RandomCategoryGeneratorButton";
 import "./trivia.css";
 
 export const Trivia = (): ReactElement => {
   const card = (
-    <React.Fragment>
-      <DefaultCard />
-    </React.Fragment>
+    <>
+      <RandomCategoryGeneratorButton />
+    </>
   );
 
   //USE LODASH DON'T BE AN IDIOT
 
-  return <div className="container">{card}</div>;
+  return <div className="triviaContainer">{card}</div>;
 };

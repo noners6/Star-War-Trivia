@@ -1,0 +1,11 @@
+.cardLocation {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.gameContainer {
+  margin-top: 25px;
+  position: center;
+  justify-content: center;
+}

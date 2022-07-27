@@ -1,0 +1,27 @@
+.planetText {
+  text-decoration: underline;
+}
+
+.planetBackground {
+  background-color: #4db6ac;
+  border: 5px solid black;
+  align-items: center;
+}
+
+.planetCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.planetTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.planetDataText {
+  margin-left: 5px;
+}

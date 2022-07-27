@@ -1,0 +1,32 @@
+.vehicleText {
+  text-decoration: underline;
+}
+
+.vehicleBackground {
+  background-color: #00c853;
+  border: 5px solid black;
+  align-items: center;
+  margin: 15px;
+}
+
+.vehicleCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.vehicleTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.vehicleDataText {
+  margin-left: 5px;
+}
+
+.vehicleBoxContainer {
+  margin-bottom: 15px;
+}

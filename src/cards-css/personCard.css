@@ -1,0 +1,27 @@
+.personText {
+  text-decoration: underline;
+}
+
+.personBackground {
+  background-color: #7e57c2;
+  border: 5px solid black;
+  align-items: center;
+}
+
+.personCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.personTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.personDataText {
+  margin-left: 5px;
+}

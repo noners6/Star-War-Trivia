@@ -1,0 +1,27 @@
+.filmText {
+  text-decoration: underline;
+}
+
+.filmBackground {
+  background-color: #2196f3;
+  border: 5px solid black;
+  align-items: center;
+}
+
+.filmCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.filmTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.filmDataText {
+  margin-left: 5px;
+}

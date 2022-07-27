@@ -1,0 +1,14 @@
+.cardContainer {
+  margin-top: 20px;
+  position: absolute;
+  justify-content: center;
+}
+
+.defaultCardText {
+  display: flex;
+  justify-content: center;
+}
+
+.cardContentContainer {
+  background-color: #263238;
+}

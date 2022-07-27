@@ -1,95 +1,128 @@
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import { Button } from "@mui/material";
 import React, { ReactElement, useEffect, useState } from "react";
+import DefaultCard from "./Cards/DefaultCard";
+import FilmCard from "./Cards/FilmCard";
 import PersonCard from "./Cards/PersonCard";
+import PlanetCard from "./Cards/PlanetCard";
+import SpeciesCard from "./Cards/SpeciesCard";
+import StarshipCard from "./Cards/StarshipCard";
+import VehicleCard from "./Cards/VehiclesCard";
 import { getStarWarsData } from "./data/api";
+import "./randomGeneratedCategory.css";
 import { randomGenerator } from "./util";
 
 export const RandomCategoryGeneratorButton = (): ReactElement => {
   const [num, setNum] = useState(0);
   const [userClicked, setUserClicked] = useState(false);
-  const [category, setCategory] = useState("");
-  const [entry, setEntry] = useState("");
-  const [data, setData] = useState([]);
   const [objectData, setObjectData] = useState({});
   const [state, setState] = useState(false);
 
   useEffect(() => {
     if (userClicked) {
-      setUserClicked(false);
-      randomCard();
-      getStarWarsData(category, entry).then((data: any) => {
-        setData(data);
+      const [testCategory, number] = randomCard();
+      console.log("category and entry from useEffect", testCategory, number);
+      getStarWarsData(testCategory, number).then((data: any) => {
+        const key: string = "data";
+        console.log("useEffect Data", data);
+        setObjectData(data[key as keyof never[]]);
+        setUserClicked(false);
       });
-      const key: string = "data";
-      setObjectData(data[key as keyof never[]]);
-      setUserClicked(false);
     }
-  }, [userClicked, setUserClicked]);
+  }, [userClicked]);
 
   const handleOnClick = (e: any) => {
     e.preventDefault();
     console.log("you clicked the button");
-    setNum(randomGenerator(1, 1));
+    setNum(randomGenerator(1, 6));
     setUserClicked(true);
+    setState(true);
   };
 
   function randomCard() {
     switch (num) {
       case 1:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const peopleCategory = "people";
+        const peopleNumber = randomGenerator(1, 83).toString();
+        return [peopleCategory, peopleNumber];
       case 2:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const filmCategory = "films";
+        const filmNumber = randomGenerator(1, 6).toString();
+        return [filmCategory, filmNumber];
+
+      // Starships had an error in the API call.
       case 3:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const starshipsCategory = "starships";
+        const starshipsNumber = randomGenerator(2, 3).toString();
+        return [starshipsCategory, starshipsNumber];
       case 4:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const vehiclesCategory = "vehicles";
+        const vehiclesNumber = randomGenerator(6, 8).toString();
+        return [vehiclesCategory, vehiclesNumber];
       case 5:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const speciesCategory = "species";
+        const speciesNumber = randomGenerator(1, 37).toString();
+        return [speciesCategory, speciesNumber];
+
       case 6:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const planetCategory = "planets";
+        const planetNumber = randomGenerator(1, 60).toString();
+        return [planetCategory, planetNumber];
       default:
-        setCategory("people");
-        setEntry(randomGenerator(1, 1).toString());
-        return;
+        const people = "people";
+        const number = "1";
+        return [people, number];
     }
   }
 
   function callCard() {
-    setUserClicked(true);
     switch (num) {
       case 1:
-        return <PersonCard personData={objectData} />;
+        const personCard = <PersonCard personData={objectData} />;
+        return <DefaultCard cardData={personCard} />;
       case 2:
-        return null;
+        const filmCard = <FilmCard filmData={objectData} />;
+        return <DefaultCard cardData={filmCard} />;
       case 3:
-        return null;
+        const starshipCard = <StarshipCard starshipData={objectData} />;
+        return <DefaultCard cardData={starshipCard} />;
       case 4:
-        return null;
+        const vehicleCard = <VehicleCard vehicleData={objectData} />;
+        return <DefaultCard cardData={vehicleCard} />;
       case 5:
-        return null;
+        const speciesCard = <SpeciesCard speciesData={objectData} />;
+        return <DefaultCard cardData={speciesCard} />;
       case 6:
-        return null;
+        const palnetCard = <PlanetCard planetData={objectData} />;
+        return <DefaultCard cardData={palnetCard} />;
       default:
-        return null;
+        const error = <div>Oh no! an error has occured!</div>;
+        return <DefaultCard cardData={error} />;
     }
   }
 
   return (
-    <div>
-      <Button onClick={handleOnClick}>Click to choose a category!</Button>
-      {userClicked && callCard()}
+    <div className={"gameContainer"}>
+      <div>
+        <Button
+          sx={{
+            backgroundColor: "black",
+            "&.MuiButtonBase-root:hover": {
+              bgcolor: "gray",
+            },
+          }}
+          variant={"contained"}
+          startIcon={<SportsEsportsIcon />}
+          endIcon={<ArrowForwardIcon />}
+          onClick={handleOnClick}
+        >
+          Generate a trivia card!
+        </Button>
+      </div>
+      <span className={"cardLocation"}>
+        {state && objectData && callCard()}
+      </span>
     </div>
   );
 };

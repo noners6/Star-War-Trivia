@@ -1,0 +1,27 @@
+.starshipText {
+  text-decoration: underline;
+}
+
+.starshipBackground {
+  background-color: #90a4ae;
+  border: 5px solid black;
+  align-items: center;
+}
+
+.starshipCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.starshipTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.starshipDataText {
+  margin-left: 5px;
+}

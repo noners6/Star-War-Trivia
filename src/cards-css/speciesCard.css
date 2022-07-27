@@ -1,0 +1,27 @@
+.speciesText {
+  text-decoration: underline;
+}
+
+.speciesBackground {
+  background-color: #dce775;
+  border: 5px solid black;
+  align-items: center;
+}
+
+.speciesCategoryText {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 20px;
+  font: bold;
+  justify-content: center;
+}
+
+.speciesTextContainer {
+  display: flex;
+  margin-left: 20px;
+}
+
+.speciesDataText {
+  margin-left: 5px;
+}
